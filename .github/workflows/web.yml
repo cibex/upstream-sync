@@ -1,8 +1,8 @@
 name: 'OCA/web Upstream Sync'
 
-on: push
-  #schedule:
-    #- cron:  '0 7 * * 1,4'
+on:
+  schedule:
+    - cron:  '0 7 * * 1,4'
 
 jobs:
   git-sync:
