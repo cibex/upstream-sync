@@ -1,0 +1,18 @@
+name: 'OCA/server-auth Upstream Sync'
+
+on:
+  schedule:
+    - cron:  '0 7 * * 1,4'
+
+jobs:
+  git-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: git-sync
+        uses: wei/git-sync@v3
+        with:
+          source_repo: "OCA/server-auth"
+          source_branch: "14.0"
+          destination_repo: "cibex/server-auth"
+          destination_branch: "14.0"
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
