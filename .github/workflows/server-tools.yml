@@ -1,0 +1,18 @@
+name: 'OCA/server-tools Upstream Sync'
+
+on:
+  schedule:
+    - cron:  '0 7 * * 1,4'
+
+jobs:
+  git-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: git-sync
+        uses: wei/git-sync@v3
+        with:
+          source_repo: "OCA/server-tools"
+          source_branch: "14.0"
+          destination_repo: "cibex/server-tools"
+          destination_branch: "14.0"
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
