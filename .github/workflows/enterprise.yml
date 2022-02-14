@@ -1,4 +1,4 @@
-name: 'Odoo Enterprise Usptream Sync'
+name: 'Odoo Enterprise Upstream Sync'
 
 on:
   schedule:
