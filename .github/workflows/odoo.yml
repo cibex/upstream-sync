@@ -1,8 +1,8 @@
 name: 'Odoo Upstream Sync'
 
 on:
+  workflow_dispatch:
   schedule:
-    - workflow_dispatch
     - cron:  '0 7 * * 1,4'
 
 jobs:
