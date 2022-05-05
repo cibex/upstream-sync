@@ -1,6 +1,7 @@
 name: 'OCA/account-financial-tools Upstream Sync'
 
 on:
+  workflow_dispatch:
   schedule:
     - cron:  '0 7 * * 1,4'
 
@@ -12,7 +13,7 @@ jobs:
         uses: wei/git-sync@v3
         with:
           source_repo: "OCA/account-financial-tools"
-          source_branch: "14.0"
+          source_branch: "refs/remotes/source/1*"
           destination_repo: "cibex/account-financial-tools"
-          destination_branch: "14.0"
+          destination_branch: "refs/heads/1*"
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
