@@ -13,7 +13,7 @@ jobs:
         uses: wei/git-sync@v3
         with:
           source_repo: "OCA/server-backend"
-          source_branch: "refs/remotes/source/1*"
+          source_branch: "refs/remotes/source/1*.0"
           destination_repo: "cibex/server-backend"
-          destination_branch: "refs/heads/1*"
+          destination_branch: "refs/heads/1*.0"
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
